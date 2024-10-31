@@ -1,0 +1,61 @@
+/* Estilo general para el contenedor de los productos */
+.price {
+    background-color: #f8f9fa; /* Color de fondo suave */
+    padding: 40px 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Títulos de la sección */
+.price .subtitle {
+    font-size: 2rem; /* Tamaño de fuente grande */
+    font-weight: bold; /* Negrita */
+    color: #ff8700; /* Color naranja de tu empresa */
+}
+
+/* Estilo para las cartas */
+.card {
+    border: none; /* Sin borde */
+    border-radius: 10px; /* Bordes redondeados */
+    transition: transform 0.2s; /* Efecto de transición */
+}
+
+/* Efecto al pasar el mouse sobre la carta */
+.card:hover {
+    transform: scale(1.05); /* Aumentar ligeramente el tamaño */
+}
+
+/* Estilo para las imágenes dentro de las cartas */
+.card img {
+    width: 100%; /* Ajustar la imagen al ancho de la carta */
+    border-radius: 10px 10px 0 0; /* Bordes redondeados en la parte superior */
+}
+
+/* Estilo para el cuerpo de la carta */
+.card-body {
+    text-align: center; /* Centrar el texto */
+}
+
+/* Estilo para el texto de la cotización */
+.carta-cotizar p {
+    margin: 0.5rem 0; /* Espaciado entre párrafos */
+}
+
+/* Estilo para el texto adicional de cotización */
+.texto_cotizar {
+    font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+    color: #6c757d; /* Color gris */
+    margin-top: 10px; /* Margen superior */
+}
+
+/* Estilo para el botón de cotización */
+.btn-primary {
+    background-color: #ff8700; /* Color de fondo del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.2s; /* Efecto de transición */
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+.btn-primary:hover {
+    background-color: #e67e22; /* Color más oscuro al pasar el mouse */
+}

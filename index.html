@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MASTER EN CSS</title>
+    <title>SUNOR</title>
     <link rel="shortcut icon" href="./images/Sunor.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/estilos.css">
@@ -16,17 +16,15 @@
 </head>
 
 <body>
-
     <header class="hero">
         <nav class="nav container">
             <div class="nav__logo">
-                <a href="#">
-                    <img src="images/Sunor.png" alt="">
+                <a href="index.html" class="logo-link">
+                    <img src="images/Sunor.png" class="img-responsive" alt="Logo">
                 </a>
             </div>
-
-
-            <ul class="nav__link nav__link--menu">
+    
+            <ul class="nav__link nav__link--menu" id="nav-links">
                 <li class="nav__items">
                     <a href="#" class="nav__links">Inicio</a>
                 </li>
@@ -34,23 +32,23 @@
                     <a href="#acerca" class="nav__links">Acerca de</a>
                 </li>
                 <li class="nav__items">
-                    <a href="productos.html">Contacto</a>
+                    <a href="productos.html" class="nav__links">Productos</a>
                 </li>
-
-                <img src="./images/close.svg" class="nav__close">
+                <li class="nav__items nav__close-item">
+                    <img src="./images/close.svg" class="nav__close">
+                </li>
             </ul>
-
-            <div class="nav__menu">
+    
+            <div class="nav__menu" id="nav-toggle">
                 <img src="./images/menu.svg" class="nav__img">
             </div>
         </nav>
-
+    
         <section class="hero__container container" id="acerca">
             <h1 class="hero__title">Experiencia y Calidad en Incendios y Climatización.</h1>
-
         </section>
     </header>
-
+    
     <main>
         <section class="container about">
             <h2 class="subtitle">¿Cuales son nuestros servicios?</h2>
@@ -276,8 +274,7 @@
             </div>
         </section>
 
-
-        <!-- Modal -->
+<!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -300,8 +297,15 @@
                         <label for="message" class="col-form-label">Mensaje:</label>
                         <textarea class="form-control" name="message" id="message" required></textarea>
                     </div>
+
+
+                    <div class="mb-3">
+                        <label for="product_name" class="col-form-label">Producto:</label>
+                        <textarea class="form-control" name="product_name" id="product_name" required></textarea>
+                    </div>
                     <input type="hidden" name="_subject" value="Nueva Cotización">
                     <input type="hidden" name="_captcha" value="false">
+                   
                 </form>
             </div>
             <div class="modal-footer">
@@ -311,7 +315,7 @@
         </div>
     </div>
 </div>
-        
+
        
     
 

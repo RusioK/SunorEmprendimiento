@@ -80,7 +80,16 @@ body {
     font-style: italic;
 }
 
+.nav__logo a {
+    display: block;
+    width: 100%; /* Ajusta según el tamaño que necesites */
+    height: 100%; /* Ajusta según el tamaño que necesites */
+}
 
+.nav__logo img {
+    width: 70%; /* Ajusta para que el logo se ajuste al contenedor */
+    height: auto;
+}
 /* Nav */
 
 .nav {
