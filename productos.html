@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SUNOR</title>
+        <link rel="shortcut icon" href="./images/Sunor.png" type="image/x-icon">
+        <link rel="stylesheet" href="./css/normalize.css">
+        <link rel="stylesheet" href="./css/estilos.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    
+    </head>
+<body>
+
+
+<main>
+    <header class="hero">
+        <nav class="nav container" role="navigation" aria-label="Main Navigation">
+            <div class="nav__logo">
+                <a href="index.html" class="logo-link" aria-label="Ir a la página de inicio">
+                    <img src="images/Sunor.png" class="img-responsive" alt="Logo de Sunor">
+                </a>
+            </div>
+    
+            <ul class="nav__link nav__link--menu" id="nav-links" role="menu">
+                <li class="nav__items" role="none">
+                    <a href="index.html" class="nav__links" role="menuitem" id="inicioLink">Inicio</a>
+                
+                </li>
+                <li class="nav__items" role="none">
+                    <a href="#acerca" class="nav__links" role="menuitem">Acerca de</a>
+                </li>
+                <li class="nav__items" role="none">
+                    <a href="productos.html" class="nav__links" role="menuitem">Productos</a>
+                </li>
+                <li class="nav__items nav__close-item">
+                    <img src="./images/close.svg" class="nav__close">
+                </li>
+                
+            </ul>
+    
+            <div class="nav__menu" id="nav-toggle" aria-label="Abrir menú">
+                <img src="./images/menu.svg" class="nav__img" alt="Abrir menú">
+            </div>
+        </nav>
+    
+        <section class="hero__container container" id="acerca">
+            <h1 class="hero__title">Experiencia y Calidad en Incendios y Climatización.</h1>
+        </section>
+    </header>
+
+
+    <section class="price container my-5" id="contacto">
+        <h2 class="subtitle text-center mb-4">Cotiza con Nosotros</h2>
+        <br>
+        <br>
+
+        <!-- Filtro de categorías -->
+        <div class="filter-categories mb-4">
+            <label for="categoryFilter" class="form-label">Filtrar por categoría:</label>
+            <select id="categoryFilter" class="form-select">
+                <option value="all">Todas</option>
+                <option value="climatizacion">Climatización</option>
+                <option value="Incendio">Incendio</option>
+            </select>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 g-4" id="productContainer">
+
+            <!-- Carta 1 -->
+            <div class="col product-item" data-category="climatizacion">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">ROOFTOP / COMPACTO - ANWO_YORK</h5>
+                        <img src="images/productos/Rooftop_compacto_anwo_york.jpeg" alt="">
+                        <div class="carta-cotizar">
+                            <p>● 60.000 BTU</p><p>● 90.000 BTU</p><p>● 120.000 BTU</p>
+                        </div>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="ROOFTOP / COMPACTO - ANWO_YORK">Cotizar</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Carta 2 -->
+
+            <div class="col product-item" data-category="climatizacion">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">AC PORTÁTIL MARCA IKA</h5>
+                        <img src="images/productos/ac_portatil_marca_ika.jpeg" alt="">
+
+                        <div class="carta-cotizar">
+
+                                <p>● 8.000 BTU</p>
+                                <p>● 12.000 BTU</p>
+                                <p>● 14.000 BTU</p>
+                        </div>
+
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="Recipient 2">
+                            Cotizar
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carta 3 -->
+
+            <div class="col product-item" data-category="climatizacion">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">AC SPLIT MURO MARCA IKA</h5>
+                        <img src="images/productos/ac_split_muro_marca_ika.jpeg" alt="">
+
+                        <div class="carta-cotizar">
+
+                            <p>● 9.000 BTU</p>
+                            <p>● 12.000 BTU</p>
+                            <p>● 18.000 BTU</p>
+                            <p>● 24.000 BTU</p>
+                            <p>● 36.000 BTU</p>
+                        </div>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="Recipient 3">
+                            Cotizar
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Carta 4 -->
+            <div class="col product-item" data-category="climatizacion">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h5 class="card-title"> AC SPLIT MURO MARCA KHONE</h5>
+                        <img src="images/productos/ac_split_muro_marca_khone.jpeg" alt="">
+
+                        <div class="carta-cotizar">
+
+                                <p>● 9.000 BTU</p>
+                                <p>● 12.000 BTU</p>
+                                <p>● 18.000 BTU</p>
+                                <p>● 24.000 BTU</p>                    
+                        </div>
+                        <p class="texto_cotizar">Solo pago contado o transferencia * No incluye instalación.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="Recipient 4">
+                           Cotizar
+                        </button>
+                    </div>
+                </div>
+            </div>
+             <!-- Carta 5 -->
+            <div class="col product-item" data-category="Incendio">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">GABINETE ATAQUE RAPIDO</h5>
+                        <img src="images/productos/gabinete_ataque_rapido.jpeg" alt="">
+
+                        <div class="carta-cotizar">
+
+                                <p>● 9.000 BTU</p>
+                                <p>● 12.000 BTU</p>
+                                <p>● 18.000 BTU</p>
+                                <p>● 24.000 BTU</p>
+                
+                        </div>
+
+                        <p class="texto_cotizar">
+                            KIT GABINETE 70X70X33 CON CARRETE 30M Y PITÓN 1
+                        </p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="Recipient 4">
+                            Cotizar
+                        </button>
+                    </div>
+                </div>
+            </div>
+             <!-- Carta 6 -->
+            <div class="col product-item" data-category="Incendio">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">TQUEMADOR RIELLO RG5S - NUEVOS Y REPUESTOS</h5>
+                        <img src="images/productos/quemador_riello_rg5s_nuevos_repuestos.jpeg" alt="">
+                        
+
+                        <p class="texto_cotizar">
+                            SUMINISTRO, INSTALACION, REPARACION Y PUESTA EN SERVICIO
+                        </p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="Recipient 4">
+                            Cotizar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Cotización</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Formulario para EmailJS -->
+                    <form id="cotizacionForm">
+                        <div class="mb-3">
+                            <label for="product_name" class="col-form-label">Producto</label>
+                            <input type="text" name="product_name" class="form-control" id="product_name" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="from_name" class="col-form-label">Nombre del Remitente</label>
+                            <input type="text" name="from_name" class="form-control" id="from_name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message_id" class="col-form-label">Correo del Remitente</label>
+                            <input type="text" name="message_id" class="form-control" id="message_id" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="col-form-label">Mensaje:</label>
+                            <textarea class="form-control" name="message" id="message" required></textarea>
+                        </div>
+                        <input type="hidden" name="_subject" value="Nueva Cotización">
+                        <input type="hidden" name="_captcha" value="false">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" id="sendButton" class="btn btn-primary">Enviar Mensaje</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+
+
+    <script src="./js/slider.js"></script>
+    <script src="./js/questions.js"></script>
+    <script src="./js/menu.js"></script>
+
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript" src="js/formularioCotizar.js"></script> <!-- Asegúrate de que este archivo se cargue -->
+    <script src="js/cargadepaginas.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

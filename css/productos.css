@@ -1,0 +1,49 @@
+/* Ajustes generales para las cartas */
+.product-item {
+    margin-bottom: 20px; /* Espaciado inferior entre cartas */
+}
+
+.card {
+    border: 1px solid #e0e0e0; /* Borde ligero para las cartas */
+    border-radius: 8px; /* Bordes redondeados */
+    overflow: hidden; /* Evita que el contenido se desborde */
+    transition: transform 0.2s; /* Transición suave al pasar el ratón */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efecto de escala al pasar el ratón */
+}
+
+/* Estilo para las imágenes */
+.card-img-top {
+    height: 200px; /* Altura fija para las imágenes */
+    object-fit: cover; /* Asegura que la imagen mantenga su proporción */
+}
+
+/* Títulos de las cartas */
+.card-title {
+    font-size: 1.2rem; /* Tamaño de fuente más grande */
+    font-weight: bold; /* Negrita para el título */
+    margin-bottom: 10px; /* Espacio inferior del título */
+}
+
+/* Estilo para el texto de las cartas */
+.card-text {
+    font-size: 1rem; /* Tamaño de fuente estándar */
+    color: #555; /* Color de texto gris oscuro */
+    margin-bottom: 15px; /* Espacio inferior para el texto */
+}
+
+/* Botón de cotizar */
+.btn-primary {
+    background-color: #007bff; /* Color de fondo del botón */
+    border: none; /* Sin borde */
+    padding: 10px 15px; /* Espaciado interno del botón */
+    font-size: 1rem; /* Tamaño de fuente del botón */
+    border-radius: 5px; /* Bordes redondeados para el botón */
+    transition: background-color 0.2s; /* Transición suave del color */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el ratón */
+}
