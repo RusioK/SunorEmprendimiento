@@ -27,17 +27,18 @@
     
             <ul class="nav__link nav__link--menu" id="nav-links" role="menu">
                 <li class="nav__items" role="none">
-                    <a href="index.html" class="nav__links" role="menuitem" id="inicioLink">Inicio</a>
-                
+                    <a href="index.html" class="nav__links" role="menuitem">Inicio</a>
                 </li>
                 <li class="nav__items" role="none">
                     <a href="#acerca" class="nav__links" role="menuitem">Acerca de</a>
                 </li>
                 <li class="nav__items" role="none">
-                    <a href="productos.html" class="nav__links" role="menuitem">Productos</a>
+                    <a href="productos.html" class="nav__links" role="menuitem">Contacto</a>
                 </li>
-                <li class="nav__items nav__close-item">
-                    <img src="./images/close.svg" class="nav__close">
+                <li class="nav__items nav__close-item" role="none">
+                    <button class="nav__close" aria-label="Cerrar menú">
+                        <img src="./images/close.svg" alt="Cerrar">
+                    </button>
                 </li>
                 
             </ul>
@@ -55,43 +56,36 @@
 
     <section class="price container my-5" id="contacto">
         <h2 class="subtitle text-center mb-4">Cotiza con Nosotros</h2>
-        <br>
-        <br>
-
-        <!-- Filtro de categorías -->
-        <div class="filter-categories mb-4">
-            <label for="categoryFilter" class="form-label">Filtrar por categoría:</label>
-            <select id="categoryFilter" class="form-select">
-                <option value="all">Todas</option>
-                <option value="climatizacion">Climatización</option>
-                <option value="Incendio">Incendio</option>
-            </select>
-        </div>
-
-        <div class="row row-cols-1 row-cols-md-2 g-4" id="productContainer">
-
+        <div class="row row-cols-1 row-cols-md-2 g-4">
             <!-- Carta 1 -->
-            <div class="col product-item" data-category="climatizacion">
+            <div class="col">
                 <div class="card shadow">
                     <div class="card-body">
                         <h5 class="card-title">ROOFTOP / COMPACTO - ANWO_YORK</h5>
-                        <img src="images/productos/Rooftop_compacto_anwo_york.jpeg" alt="">
+                        <img src="images/Rooftop_compacto_anwo_york.jpeg" alt="">
+
                         <div class="carta-cotizar">
-                            <p>● 60.000 BTU</p><p>● 90.000 BTU</p><p>● 120.000 BTU</p>
+
+                            <p>● 60.000 BTU</p>
+                            <p>● 90.000 BTU</p>
+                            <p>● 120.000 BTU</p>
+                            <p>● 180.000 BTU</p>
+                            <p>● 240.000 BTU</p>
+                        
                         </div>
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="ROOFTOP / COMPACTO - ANWO_YORK">Cotizar</button>
+                       
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="ROOFTOP / COMPACTO - ANWO_YORK">
+                            Cotizar
+                        </button>
                     </div>
                 </div>
             </div>
-
-
             <!-- Carta 2 -->
-
-            <div class="col product-item" data-category="climatizacion">
+            <div class="col">
                 <div class="card shadow">
                     <div class="card-body">
                         <h5 class="card-title">AC PORTÁTIL MARCA IKA</h5>
-                        <img src="images/productos/ac_portatil_marca_ika.jpeg" alt="">
+                        <img src="images/ac_portatil_marca_ika.jpeg" alt="">
 
                         <div class="carta-cotizar">
 
@@ -107,14 +101,12 @@
                     </div>
                 </div>
             </div>
-
             <!-- Carta 3 -->
-
-            <div class="col product-item" data-category="climatizacion">
+            <div class="col">
                 <div class="card shadow">
                     <div class="card-body">
                         <h5 class="card-title">AC SPLIT MURO MARCA IKA</h5>
-                        <img src="images/productos/ac_split_muro_marca_ika.jpeg" alt="">
+                        <img src="images/ac_split_muro_marca_ika.jpeg" alt="">
 
                         <div class="carta-cotizar">
 
@@ -131,11 +123,11 @@
                 </div>
             </div>
             <!-- Carta 4 -->
-            <div class="col product-item" data-category="climatizacion">
+            <div class="col">
                 <div class="card shadow">
                     <div class="card-body">
-                        <h5 class="card-title"> AC SPLIT MURO MARCA KHONE</h5>
-                        <img src="images/productos/ac_split_muro_marca_khone.jpeg" alt="">
+                        <h5 class="card-title"></h5>
+                        <img src="images/ac_split_muro_marca_khone.jpeg" alt="">
 
                         <div class="carta-cotizar">
 
@@ -152,11 +144,11 @@
                 </div>
             </div>
              <!-- Carta 5 -->
-            <div class="col product-item" data-category="Incendio">
+            <div class="col">
                 <div class="card shadow">
                     <div class="card-body">
                         <h5 class="card-title">GABINETE ATAQUE RAPIDO</h5>
-                        <img src="images/productos/gabinete_ataque_rapido.jpeg" alt="">
+                        <img src="images/gabinete_ataque_rapido.jpeg" alt="">
 
                         <div class="carta-cotizar">
 
@@ -177,12 +169,11 @@
                 </div>
             </div>
              <!-- Carta 6 -->
-            <div class="col product-item" data-category="Incendio">
+            <div class="col">
                 <div class="card shadow">
                     <div class="card-body">
                         <h5 class="card-title">TQUEMADOR RIELLO RG5S - NUEVOS Y REPUESTOS</h5>
-                        <img src="images/productos/quemador_riello_rg5s_nuevos_repuestos.jpeg" alt="">
-                        
+                        <img src="images/quemador_riello_rg5s_nuevos_repuestos.jpeg" alt="">
 
                         <p class="texto_cotizar">
                             SUMINISTRO, INSTALACION, REPARACION Y PUESTA EN SERVICIO
@@ -196,44 +187,45 @@
         </div>
     </section>
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Cotización</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                </div>
-                <div class="modal-body">
-                    <!-- Formulario para EmailJS -->
-                    <form id="cotizacionForm">
-                        <div class="mb-3">
-                            <label for="product_name" class="col-form-label">Producto</label>
-                            <input type="text" name="product_name" class="form-control" id="product_name" readonly>
-                        </div>
-                        <div class="mb-3">
-                            <label for="from_name" class="col-form-label">Nombre del Remitente</label>
-                            <input type="text" name="from_name" class="form-control" id="from_name" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="message_id" class="col-form-label">Correo del Remitente</label>
-                            <input type="text" name="message_id" class="form-control" id="message_id" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="message" class="col-form-label">Mensaje:</label>
-                            <textarea class="form-control" name="message" id="message" required></textarea>
-                        </div>
-                        <input type="hidden" name="_subject" value="Nueva Cotización">
-                        <input type="hidden" name="_captcha" value="false">
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" id="sendButton" class="btn btn-primary">Enviar Mensaje</button>
-                </div>
+ <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Cotización</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Formulario para EmailJS -->
+                <form id="cotizacionForm">
+                    <div class="mb-3">
+                        <label for="product_name" class="col-form-label">Producto</label>
+                        <input type="text" name="product_name" class="form-control" id="product_name" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="from_name" class="col-form-label">Nombre del Remitente</label>
+                        <input type="text" name="from_name" class="form-control" id="from_name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message_id" class="col-form-label">Correo del Remitente</label>
+                        <input type="text" name="message_id" class="form-control" id="message_id" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="col-form-label">Mensaje:</label>
+                        <textarea class="form-control" name="message" id="message" required></textarea>
+                    </div>
+                    <input type="hidden" name="_subject" value="Nueva Cotización">
+                    <input type="hidden" name="_captcha" value="false">
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" id="sendButton" class="btn btn-primary">Enviar Mensaje</button>
             </div>
         </div>
     </div>
+</div>
+
 
 </main>
 
@@ -247,7 +239,7 @@
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript" src="js/formularioCotizar.js"></script> <!-- Asegúrate de que este archivo se cargue -->
-    <script src="js/cargadepaginas.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>

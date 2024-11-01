@@ -4,7 +4,7 @@ emailjs.init('ECOp68bJKsmYRN75I');
 const sendButton = document.getElementById('sendButton');
 const cotizacionForm = document.getElementById('cotizacionForm');
 const exampleModal = document.getElementById('exampleModal');
-const productNameInput = document.getElementById('product_name'); // Campo de producto
+const productNameInput = document.getElementById('product_name'); // Nuevo campo de producto
 
 // Función para validar el correo electrónico
 function validateEmail(email) {
@@ -33,22 +33,25 @@ function validateForm() {
     return true;
 }
 
-// Enviar mensaje
-sendButton.addEventListener('click', () => {
-    if (!validateForm()) return; // Si la validación falla, no continuar
+sendButton.addEventListener('click', function () {
+    if (!validateForm()) {
+        return; // Si la validación falla, no continuar
+    }
 
     sendButton.textContent = 'Enviando...'; // Cambiar texto del botón
 
     // Enviar el formulario a EmailJS
     emailjs.sendForm('default_service', 'template_11b4txw', cotizacionForm)
         .then(() => {
-            alert('¡La solicitud de cotización se creó con éxito!');
+            sendButton.textContent = 'Enviar Mensaje'; // Restablecer texto del botón
+            alert('¡La solicitud de cotización se creó con éxito!'); // Mensaje de éxito
             cotizacionForm.reset(); // Reiniciar el formulario
             productNameInput.value = ''; // Limpiar el campo de producto
-            sendButton.textContent = 'Enviar Mensaje'; // Restablecer texto del botón
+            
+           
         }, (err) => {
-            alert('Error al enviar: ' + JSON.stringify(err));
             sendButton.textContent = 'Enviar Mensaje'; // Restablecer texto del botón
+            alert('Error al enviar: ' + JSON.stringify(err)); // Mensaje de error
         });
 });
 
@@ -57,31 +60,16 @@ if (exampleModal) {
     exampleModal.addEventListener('show.bs.modal', event => {
         const button = event.relatedTarget; // Obtener el botón que activó el modal
         const recipient = button.getAttribute('data-bs-whatever'); // Obtener el valor del atributo 'data-bs-whatever'
-        exampleModal.querySelector('.modal-title').textContent = `Cotización para ${recipient}`; // Actualizar título
-        productNameInput.value = recipient; // Asignar nombre del producto al campo correspondiente
+        const modalTitle = exampleModal.querySelector('.modal-title'); // Seleccionar el título del modal
+
+        modalTitle.textContent = `Cotización para ${recipient}`; // Actualizar el título del modal
+        productNameInput.value = recipient; // Asignar el nombre del producto al campo correspondiente
     });
 
     // Restablecer el formulario al cerrar el modal
     exampleModal.addEventListener('hidden.bs.modal', () => {
-        cotizacionForm.reset(); // Reiniciar el formulario
+        cotizacionForm.reset(); // Limpiar el formulario
         productNameInput.value = ''; // Limpiar el campo de producto
+        sendButton.textContent = 'Enviar Mensaje'; // Restablecer el texto del botón
     });
 }
-
-// Filtro de categorías
-const categoryFilter = document.getElementById('categoryFilter');
-const productContainer = document.getElementById('productContainer');
-
-categoryFilter.addEventListener('change', () => {
-    const selectedCategory = categoryFilter.value;
-    const products = productContainer.children; // Obtener todos los productos
-
-    Array.from(products).forEach(product => {
-        const productCategory = product.dataset.category; // Obtener la categoría del producto
-        if (selectedCategory === 'all' || productCategory === selectedCategory) {
-            product.style.display = ''; // Mostrar el producto
-        } else {
-            product.style.display = 'none'; // Ocultar el producto
-        }
-    });
-});
