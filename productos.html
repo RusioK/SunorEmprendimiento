@@ -8,6 +8,7 @@
         <link rel="shortcut icon" href="./images/Sunor.png" type="image/x-icon">
         <link rel="stylesheet" href="./css/normalize.css">
         <link rel="stylesheet" href="./css/estilos.css">
+        <link rel="stylesheet" href="./css/productos.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     
@@ -33,7 +34,7 @@
                     <a href="#acerca" class="nav__links" role="menuitem">Acerca de</a>
                 </li>
                 <li class="nav__items" role="none">
-                    <a href="productos.html" class="nav__links" role="menuitem">Contacto</a>
+                    <a href="productos.html" class="nav__links" role="menuitem">Productos</a>
                 </li>
                 <li class="nav__items nav__close-item" role="none">
                     <button class="nav__close" aria-label="Cerrar menú">
@@ -56,9 +57,22 @@
 
     <section class="price container my-5" id="contacto">
         <h2 class="subtitle text-center mb-4">Cotiza con Nosotros</h2>
-        <div class="row row-cols-1 row-cols-md-2 g-4">
+        <br>
+        <br>
+        
+        <select id="categoryFilter" class="form-select">
+            <option value="all">Todas las categorías</option>
+            <option value="climatizacion">climatizacion</option>
+            <option value="incendios">incendios</option>
+        </select>
+
+        <br>
+        <br>
+    
+
+        <div class="row row-cols-1 row-cols-md-2 g-4" id="productContainer">
             <!-- Carta 1 -->
-            <div class="col">
+            <div class="col" data-category="climatizacion">
                 <div class="card shadow">
                     <div class="card-body">
                         <h5 class="card-title">ROOFTOP / COMPACTO - ANWO_YORK</h5>
@@ -144,9 +158,9 @@
                 </div>
             </div>
              <!-- Carta 5 -->
-            <div class="col">
+            <div class="col" data-category="incendios">
                 <div class="card shadow">
-                    <div class="card-body">
+                    <div class="card-body" >
                         <h5 class="card-title">GABINETE ATAQUE RAPIDO</h5>
                         <img src="images/gabinete_ataque_rapido.jpeg" alt="">
 
@@ -225,22 +239,74 @@
         </div>
     </div>
 </div>
+<footer class="pie-pagina">
+    <div class="grupo-1" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; padding: 20px;">
+        <div class="box" style="flex: 1; min-width: 200px; margin-right: 20px;">
+            <h2>SOBRE NOSOTROS</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsa?</p>
+        </div>
+
+        <div class="box" style="flex: 1; min-width: 200px; margin-right: 20px;">
+            <h2>SÍGUENOS</h2>
+            <div class="red-social">
+                <a href="#"><img src="images/iconos/facebook.png" alt="Facebook" width="30" height="30"></a>
+                <a href="#"><img src="images/iconos/instagram.png" alt="Instagram" width="30" height="30"></a>
+                <a href="#"><img src="images/iconos/gorjeo.png" alt="Twitter" width="30" height="30"></a>
+                <a href="#"><img src="images/iconos/youtube.png" alt="YouTube" width="30" height="30"></a>
+            </div>
+        </div>
+
+        <!-- Formulario de contacto -->
+        <div class="box" style="width: 100%; max-width: 300px; margin: auto; padding: 10px; border: 1px solid #ccc; border-radius: 8px; background-color: #f9f9f9; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); flex: 1; min-width: 200px;">
+            <h2 style="text-align: center; color: #001A49; font-size: 16px;">CONTACTO</h2>
+            <!-- Sección para alertas visuales -->
+            <div id="alert" style="display: none; padding: 8px; border-radius: 5px; margin-bottom: 10px; font-size: 12px;"></div>
+            <form id="form">
+                <div class="field" style="margin-bottom: 8px;">
+                    <label for="to_names" style="display: block; margin-bottom: 2px; font-weight: bold; font-size: 12px;">Nombre:</label>
+                    <input type="text" name="to_names" id="to_names" style="width: 100%; padding: 6px; border: 1px solid #ccc; border-radius: 5px; font-size: 12px;">
+                </div>
+                <div class="field" style="margin-bottom: 8px;">
+                    <label for="message_ide" style="display: block; margin-bottom: 2px; font-weight: bold; font-size: 12px;">Correo del remitente:</label>
+                    <input type="text" name="message_ide" id="message_ide" style="width: 100%; padding: 6px; border: 1px solid #ccc; border-radius: 5px; font-size: 12px;">
+                </div>
+                <div class="field" style="margin-bottom: 8px;">
+                    <label for="messages" style="display: block; margin-bottom: 2px; font-weight: bold; font-size: 12px;">Mensaje:</label>
+                    <textarea name="messages" id="messages" style="width: 100%; padding: 6px; border: 1px solid #ccc; border-radius: 5px; resize: none; font-size: 12px; height: 50px;"></textarea>
+                </div>
+
+                <input type="submit" id="button" value="Send Email" style="width: 100%; padding: 6px; border: none; border-radius: 5px; background-color: #2091F9; color: white; font-weight: bold; cursor: pointer; transition: background-color 0.3s; font-size: 12px;">
+            </form>
+        </div>
+    </div>
+
+    <div class="grupo-2" style="text-align: center; padding: 10px;">
+        <figure>
+            <a href="#">
+                <img src="images/Sunor.png" alt="Logo de SLee Dw" style="max-width: 100px;">
+            </a>
+        </figure>
+        <small>&copy; 2024 <b>Sunor</b> - Todos los Derechos Reservados.</small>
+    </div>
+</footer>
 
 
 </main>
 
 
 
-    <script src="./js/slider.js"></script>
-    <script src="./js/questions.js"></script>
-    <script src="./js/menu.js"></script>
+    <!-- Primero cargamos EmailJS -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
+<!-- Después nuestro script de contacto -->
+<script src="js/contactoFormulario.js"></script>
 
-
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="text/javascript" src="js/formularioCotizar.js"></script> <!-- Asegúrate de que este archivo se cargue -->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<!-- El resto de scripts -->
+<script src="./js/slider.js"></script>
+<script src="./js/questions.js"></script>
+<script src="./js/menu.js"></script>
+<script type="text/javascript" src="js/formularioCotizar.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
