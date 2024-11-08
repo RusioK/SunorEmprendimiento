@@ -6,166 +6,204 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SUNOR</title>
-    <link rel="shortcut icon" href="./images/Sunor.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/iconos/Sunor.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="./css/navStyle.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
 <body>
-    <header class="hero">
-        <nav class="nav container">
-            <div class="nav__logo">
-                <a href="index.html" class="logo-link">
-                    <img src="images/Sunor.png" class="img-responsive" alt="Logo">
-                </a>
-            </div>
-            <ul class="nav__link nav__link--menu" id="nav-links">
-                <li class="nav__items">
-                    <a href="#" class="nav__links">Inicio</a>
+
+    <!-- Sección de iconos sociales superior -->
+    <div class="top-icons">
+        <div class="icons">
+            <a href="https://www.facebook.com/sunor.cl/"><img src="images/iconos/facebook.png" alt="Instagram"></a>
+            <a href="#"><img src="images/iconos/youtube.png" alt="YouTube"></a>
+        </div>
+    </div>
+
+    <header id="main-header">
+        <div class="logo-container">
+            <!-- Hacemos el logo clickeable envolviéndolo en un enlace -->
+            <a href="index.html"> <!-- Cambia "index.html" por la URL de tu página de inicio -->
+                <img src="images/iconos/Sunor.png" alt="Logo Teknica" class="logo">
+            </a>
+
+        </div>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li>
+                    <a href="productos.html">Productos</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="productos.html#climatizacion">Climatización</a></li>
+                        <li><a href="productos.html#incendios">Incendios</a></li>
+                    </ul>
                 </li>
-                <li class="nav__items">
-                    <a href="#acerca" class="nav__links">Acerca de</a>
-                </li>
-                <li class="nav__items">
-                    <a href="productos.html" class="nav__links">Productos</a>
-                </li>
-                <li class="nav__items nav__close-item">
-                    <img src="./images/close.svg" class="nav__close">
-                </li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Contacto</a></li>
             </ul>
-            <div class="nav__menu" id="nav-toggle">
-                <img src="./images/menu.svg" class="nav__img">
-            </div>
         </nav>
-        <section class="hero__container container" id="acerca">
-            <h1 class="hero__title">Experiencia y Calidad en Incendios y Climatización.</h1>
-        </section>
+
+        <div class="right-section">
+
+        </div>
+
+        <!-- Menú hamburguesa para móviles -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </header>
+
+    <!-- Contenedor para el menú móvil -->
+    <div id="mobile-menu" class="mobile-menu">
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Noticias</a></li>
+            <li><a href="#">Blog's</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </div>
+    
+
+
     <main>
-        <section class="container about">
-            <h2 class="subtitle">¿Cuales son nuestros servicios?</h2>
-            <p class="about__paragraph">Todo lo necesario , (Climatizacion, ingenierias y proyectos, Multi V, Sistema
-                contra riesgos de incendios)</p>
-            <div class="about__main">
-                <article class="about__icons">
-                    <img src="./images/shapes.svg" class="about__icon">
-                    <h3 class="about__title">Climatizacion</h3>
-                    <p class="about__paragrah">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae tempore
-                        porro eius facilis?</p>
-                </article>
-                <article class="about__icons">
-                    <img src="./images/paint.svg" class="about__icon">
-                    <h3 class="about__title">ingenierias y proyectos</h3>
-                    <p class="about__paragrah">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae tempore
-                        porro eius facilis?</p>
-                </article>
-                <article class="about__icons">
-                    <img src="./images/code.svg" class="about__icon">
-                    <h3 class="about__title">Multi V</h3>
-                    <p class="about__paragrah">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae tempore
-                        porro eius facilis?</p>
-                </article>
-                <article class="about__icons">
-                    <img src="./images/code.svg" class="about__icon">
-                    <h3 class="about__title">Sistema contra riesgos de incendios</h3>
-                    <p class="about__paragrah">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae tempore
-                        porro eius facilis?</p>
-                </article>
-                <article class="about__icons">
-                    <img src="./images/code.svg" class="about__icon">
-                    <h3 class="about__title">Sistema contra riesgos de incendios</h3>
-                    <p class="about__paragrah">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae tempore
-                        porro eius facilis?</p>
-                </article>
-            </div>
-        </section>
-        <section class="knowledge">
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="images/AireAcondicionadoPortada.jpg" class="d-block w-100" alt="...">
-                        <div class="carousel-overlay"></div>
-                        <div class="carousel-text">
-                            <h2>Climatización Profesional</h2>
-                            <p>Soluciones de alta tecnología</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/AireFotoCarousel.jpg" class="d-block w-100" alt="...">
-                        <div class="carousel-overlay"></div>
-                        <div class="carousel-text">
-                            <h2>Tecnología Avanzada</h2>
-                            <p>Sistemas inteligentes</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/AireFotoCarousel.jpg" class="d-block w-100" alt="...">
-                        <div class="carousel-overlay"></div>
-                        <div class="carousel-text">
-                            <h2>Servicio Premium</h2>
-                            <p>Expertos en climatización</p>
-                        </div>
-                    </div>
+<!-- Sección de carousel -->
+<section class="knowledge">
+    <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/imagenesInicio/Equipo Sunor oficial.png" class="d-block w-100" alt="...">
+                <div class="carousel-overlay"></div>
+                <div class="carousel-text" style="padding-bottom: 50px;">  <!-- Added padding-bottom -->
+                    <h2>Climatización Profesional</h2>
+                    <p>Soluciones de alta tecnología</p>
+                    <a href="#contacto" class="contact-button" style="margin-top: 30px;">Contáctanos</a>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
+            <div class="carousel-item">
+                <img src="images/SUNOR/pagina 1.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-overlay"></div>
+                <div class="carousel-text">
+                    <h2>Tecnología Avanzada</h2>
+                    <p>Sistemas inteligentes</p>
+                    <a href="#contacto" class="contact-button">Contáctanos</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/SUNOR/pagina 2.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-overlay"></div>
+                <div class="carousel-text">
+                    <h2>Servicio Premium</h2>
+                    <p>Expertos en climatización</p>
+                    <a href="#contacto" class="contact-button">Contáctanos</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
+
+
+        
+        <!-- Sección de servicios -->
+        <section class="about">
+            <h2 class="subtitle">¿Cuales son nuestros servicios?</h2>
+            
+            <div class="custom-icon-slider">
+                <div class="custom-icon-track">
+                    <div class="custom-icon-slide">
+                        <img src="images/iconosWeb/Icono-01.png" alt="Climatización">
+                        <h3 class="custom-icon-text">Respaldo de energia</h3>
+                    </div>
+                    <div class="custom-icon-slide">
+                        <img src="images/iconosWeb/Icono-02.png" alt="Ingeniería">
+                        <h3 class="custom-icon-text">Climatización industrial</h3>
+                    </div>
+                    <div class="custom-icon-slide">
+                        <img src="images/iconosWeb/Icono-03.png" alt="Multi V">
+                        <h3 class="custom-icon-text">Sistema contra incendios</h3>
+                    </div>
+                    <div class="custom-icon-slide">
+                        <img src="images/iconosWeb/Icono-04.png" alt="Incendios">
+                        <h3 class="custom-icon-text">Servicio de mantenimiento</h3>
+                    </div>
+                    <div class="custom-icon-slide">
+                        <img src="images/iconosWeb/Icon-Soluciones-Modulares.png" alt="Incendios">
+                        <h3 class="custom-icon-text">Soluciones modulares</h3>
+                    </div>
+                
+         
+                </div>
+                <button class="custom-slider-button custom-prev">←</button>
+                <button class="custom-slider-button custom-next">→</button>
+            </div>
+            
+            
+            
+            
+                
         </section>
-        
-        
-        
+    
+    
+    <h2 class="subtitle">Conoce nuestros trabajadores</h2>
+    <br>
+    <br>
+        <!-- Sección de testimonios -->
         <section class="testimony">
             <div class="testimony__container container">
                 <img src="images/leftarrow.svg" class="testimony__arrow" id="before">
+                <!-- Testimonio 1 -->
                 <section class="testimony__body testimony__body--show" data-id="1">
                     <div class="testimony__texts">
-                        <h2 class="subtitle">Mi nombre es Jordan Alexander, <span class="testimony__course">estudiante
-                                de CSS.</span></h2>
-                        <p class="testimony__review">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut est
-                            esse, asperiores eaque totam nulla repudiandae quasi, deserunt culpa exercitationem
-                            blanditiis laborum veniam laboriosam saepe reiciendis dolorem. Cum, ratione voluptatum!</p>
+                        <h>Mi nombre es Jordan Alexander, <span class="testimony__course">estudiante de CSS.</span></h2>
+                        <p class="testimony__review">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut est esse, asperiores eaque totam nulla repudiandae quasi...</p>
                     </div>
                     <figure class="testimony__picture">
                         <img src="./images/face.jpg" class="testimony__img">
                     </figure>
                 </section>
+                <!-- Testimonio 2 -->
                 <section class="testimony__body" data-id="2">
                     <div class="testimony__texts">
-                        <h2 class="subtitle">Mi nombre es Alejandra Perez, <span class="testimony__course">estudiante de
-                                CSS.</span></h2>
-                        <p class="testimony__review">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut est
-                            esse, asperiores eaque laborum veniam laboriosam saepe reiciendis dolorem. Cum, ratione
-                            voluptatum!</p>
+                        <h2>Mi nombre es Alejandra Perez, <span class="testimony__course">estudiante de CSS.</span></h2>
+                        <p class="testimony__review">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut est esse...</p>
                     </div>
                     <figure class="testimony__picture">
                         <img src="./images/face2.jpg" class="testimony__img">
                     </figure>
                 </section>
+                <!-- Testimonio 3 -->
                 <section class="testimony__body" data-id="3">
                     <div class="testimony__texts">
-                        <h2 class="subtitle">Mi nombre es Karen Arteaga, <span class="testimony__course">estudiante de
-                                CSS.</span></h2>
-                        <p class="testimony__review">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut est
-                            esse, niam laboriosam saepe reiciendis dolorem. Cum, ratione voluptatum!</p>
+                        <h2 >Mi nombre es Karen Arteaga, <span class="testimony__course">estudiante de CSS.</span></h2>
+                        <p class="testimony__review">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut est esse...</p>
                     </div>
                     <figure class="testimony__picture">
                         <img src="./images/face3.jpg" class="testimony__img">
                     </figure>
                 </section>
+                <!-- Testimonio 4 -->
                 <section class="testimony__body" data-id="4">
                     <div class="testimony__texts">
-                        <h2 class="subtitle">Mi nombre es Kevin Ramirez, <span class="testimony__course">estudiante de
-                                CSS.</span></h2>
-                        <p class="testimony__review">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut est
-                            esse, niam laboriosam saepe reiciendis dolorem. Cum, ratione voluptatum!</p>
+                        <h2 >Mi nombre es Kevin Ramirez, <span class="testimony__course">estudiante de CSS.</span></h2>
+                        <p class="testimony__review">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut est esse...</p>
                     </div>
                     <figure class="testimony__picture">
                         <img src="./images/face4.jpg" class="testimony__img">
@@ -174,130 +212,123 @@
                 <img src="./images/rightarrow.svg" class="testimony__arrow" id="next">
             </div>
         </section>
+    
+        <!-- Sección de preguntas frecuentes -->
         <section class="questions container">
             <h2 class="subtitle">Preguntas frecuentes</h2>
-            <p class="questions__paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea, porro
-                doloribus neque perspiciatis sapiente fuga.</p>
+            <p class="questions__paragraph" style="margin-top: 100px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea, porro doloribus neque perspiciatis sapiente fuga.</p>
             <section class="questions__container">
+                <!-- Pregunta 1 -->
                 <article class="questions__padding">
                     <div class="questions__answer">
-                        <h3 class="questions__title">¿Qué es CSS?
-                            <span class="questions__arrow">
-                                <img src="./images/arrow.svg" class="questions__img">
-                            </span>
-                        </h3>
-                        <p class="questions__show">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos
-                            facere, quidem eum id excepturi assumenda explicabo nam accusamus veritatis voluptates
-                            eveniet adipisci, dicta nihil nemo modi possimus officiis quam atque? Lorem ipsum, dolor sit
-                            amet consectetur adipisicing elit. Quos facere, quidem eum id excepturi assumenda explicabo
-                            nam accusamus veritatis voluptates eveniet adipisci, dicta nihil nemo modi possimus officiis
-                            quam atque?</p>
+                        <h3 class="questions__title">¿Qué es CSS? <span class="questions__arrow"><img src="./images/arrow.svg" class="questions__img"></span></h3>
+                        <p class="questions__show">Lorem ipsum, dolor sit amet consectetur adipisicing elit...</p>
                     </div>
                 </article>
+                <!-- Pregunta 2 -->
                 <article class="questions__padding">
                     <div class="questions__answer">
-                        <h3 class="questions__title">¿Qué aprenderé en este curso?
-                            <span class="questions__arrow">
-                                <img src="./images/arrow.svg" class="questions__img">
-                            </span>
-                        </h3>
-                        <p class="questions__show">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos
-                            facere, quidem eum id excepturi assumenda explicabo nam accusamus veritatis voluptates
-                            eveniet adipisci, dicta nihil nemo modi possimus officiis quam atque? Lorem ipsum, dolor sit
-                            amet consectetur adipisicing elit. Quos facere, quidem eum id excepturi assumenda explicabo
-                            nam accusamus veritatis voluptates eveniet adipisci, dicta nihil nemo modi possimus officiis
-                            quam atque?</p>
+                        <h3 class="questions__title">¿Qué aprenderé en este curso? <span class="questions__arrow"><img src="./images/arrow.svg" class="questions__img"></span></h3>
+                        <p class="questions__show">Lorem ipsum, dolor sit amet consectetur adipisicing elit...</p>
                     </div>
                 </article>
+                <!-- Pregunta 3 -->
                 <article class="questions__padding">
                     <div class="questions__answer">
-                        <h3 class="questions__title">¿Qué es CSS GRID?
-                            <span class="questions__arrow">
-                                <img src="./images/arrow.svg" class="questions__img">
-                            </span>
-                        </h3>
-                        <p class="questions__show">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos
-                            facere, quidem eum id excepturi assumenda explicabo nam accusamus veritatis voluptates
-                            eveniet adipisci, dicta nihil nemo modi possimus officiis quam atque? Lorem ipsum, dolor sit
-                            amet consectetur adipisicing elit. Quos facere, quidem eum id excepturi assumenda explicabo
-                            nam accusamus veritatis voluptates eveniet adipisci, dicta nihil nemo modi possimus officiis
-                            quam atque?</p>
+                        <h3 class="questions__title">¿Qué es CSS GRID? <span class="questions__arrow"><img src="./images/arrow.svg" class="questions__img"></span></h3>
+                        <p class="questions__show">Lorem ipsum, dolor sit amet consectetur adipisicing elit...</p>
                     </div>
                 </article>
             </section>
-            <section class="questions__offer">
-                <h2 class="subtitle">¿Estas listo para aprender CSS?</h2>
-                <p class="questions__copy">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet ratione
-                    architecto magnam, officiis ex porro vero est voluptates quaerat quibusdam illo veniam reprehenderit
-                    eius atque tempora iure ab non autem.</p>
+    
+            <!-- Oferta -->
+
+            <h2 class="subtitle">¿Estás listo para aprender CSS?</h2>
+
+            <section class="questions__offer" style="margin-top: 150px;">
+                <p class="questions__copy">Lorem, ipsum dolor sit amet consectetur adipisicing elit...</p>
                 <a href="#" class="cta">Aprende ahora</a>
             </section>
         </section>
     </main>
+    
 
     <footer class="pie-pagina">
-        <div class="grupo-1" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; padding: 20px;">
+        <div class="grupo-1"
+            style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; padding: 20px;">
             <div class="box" style="flex: 1; min-width: 200px; margin-right: 20px;">
                 <h2>SOBRE NOSOTROS</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsa?</p>
             </div>
-    
+
             <div class="box" style="flex: 1; min-width: 200px; margin-right: 20px;">
                 <h2>SÍGUENOS</h2>
                 <div class="red-social">
                     <a href="#"><img src="images/iconos/facebook.png" alt="Facebook" width="30" height="30"></a>
                     <a href="#"><img src="images/iconos/instagram.png" alt="Instagram" width="30" height="30"></a>
-                    <a href="#"><img src="images/iconos/gorjeo.png" alt="Twitter" width="30" height="30"></a>
-                    <a href="#"><img src="images/iconos/youtube.png" alt="YouTube" width="30" height="30"></a>
+
+
                 </div>
             </div>
-    
+
             <!-- Formulario de contacto -->
-            <div class="box" style="width: 100%; max-width: 300px; margin: auto; padding: 10px; border: 1px solid #ccc; border-radius: 8px; background-color: #f9f9f9; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); flex: 1; min-width: 200px;">
+            <div class="box"
+                style="width: 100%; max-width: 300px; margin: auto; padding: 10px; border: 1px solid #ccc; border-radius: 8px; background-color: #f9f9f9; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); flex: 1; min-width: 200px;">
                 <h2 style="text-align: center; color: #001A49; font-size: 16px;">CONTACTO</h2>
                 <!-- Sección para alertas visuales -->
-                <div id="alert" style="display: none; padding: 8px; border-radius: 5px; margin-bottom: 10px; font-size: 12px;"></div>
+                <div id="alert"
+                    style="display: none; padding: 8px; border-radius: 5px; margin-bottom: 10px; font-size: 12px;">
+                </div>
                 <form id="form">
                     <div class="field" style="margin-bottom: 8px;">
-                        <label for="to_names" style="display: block; margin-bottom: 2px; font-weight: bold; font-size: 12px;">Nombre:</label>
-                        <input type="text" name="to_names" id="to_names" style="width: 100%; padding: 6px; border: 1px solid #ccc; border-radius: 5px; font-size: 12px;">
+                        <label for="to_names"
+                            style="display: block; margin-bottom: 2px; font-weight: bold; font-size: 12px;">Nombre:</label>
+                        <input type="text" name="to_names" id="to_names"
+                            style="width: 100%; padding: 6px; border: 1px solid #ccc; border-radius: 5px; font-size: 12px;">
                     </div>
                     <div class="field" style="margin-bottom: 8px;">
-                        <label for="message_ide" style="display: block; margin-bottom: 2px; font-weight: bold; font-size: 12px;">Correo del remitente:</label>
-                        <input type="text" name="message_ide" id="message_ide" style="width: 100%; padding: 6px; border: 1px solid #ccc; border-radius: 5px; font-size: 12px;">
+                        <label for="message_ide"
+                            style="display: block; margin-bottom: 2px; font-weight: bold; font-size: 12px;">Correo del
+                            remitente:</label>
+                        <input type="text" name="message_ide" id="message_ide"
+                            style="width: 100%; padding: 6px; border: 1px solid #ccc; border-radius: 5px; font-size: 12px;">
                     </div>
                     <div class="field" style="margin-bottom: 8px;">
-                        <label for="messages" style="display: block; margin-bottom: 2px; font-weight: bold; font-size: 12px;">Mensaje:</label>
-                        <textarea name="messages" id="messages" style="width: 100%; padding: 6px; border: 1px solid #ccc; border-radius: 5px; resize: none; font-size: 12px; height: 50px;"></textarea>
+                        <label for="messages"
+                            style="display: block; margin-bottom: 2px; font-weight: bold; font-size: 12px;">Mensaje:</label>
+                        <textarea name="messages" id="messages"
+                            style="width: 100%; padding: 6px; border: 1px solid #ccc; border-radius: 5px; resize: none; font-size: 12px; height: 50px;"></textarea>
                     </div>
-    
-                    <input type="submit" id="button" value="Send Email" style="width: 100%; padding: 6px; border: none; border-radius: 5px; background-color: #2091F9; color: white; font-weight: bold; cursor: pointer; transition: background-color 0.3s; font-size: 12px;">
+
+                    <input type="submit" id="button" value="Send Email"
+                        style="width: 100%; padding: 6px; border: none; border-radius: 5px; background-color: #2091F9; color: white; font-weight: bold; cursor: pointer; transition: background-color 0.3s; font-size: 12px;">
                 </form>
             </div>
         </div>
-    
+
         <div class="grupo-2" style="text-align: center; padding: 10px;">
             <figure>
                 <a href="#">
-                    <img src="images/Sunor.png" alt="Logo de Sunor" style="max-width: 100px;">
+                    <img src="images/iconos/sunorLogoBlanco.png" alt="Logo de Sunor" style="max-width: 100px;">
                 </a>
             </figure>
             <small>&copy; 2024 <b>Sunor</b> - Todos los Derechos Reservados.</small>
         </div>
     </footer>
-    
-
-    
 
 
 
 
 
-
+    <script src="./js/iconCarousel.js"></script>
+    <script src="./js/scrollTitle.js"></script>
+    <script src="./js/carouselNav.js"></script>
+    <script src="./js/navbarMove.js"></script>
     <script src="./js/slider.js"></script>
     <script src="./js/questions.js"></script>
     <script src="./js/menu.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>    <script src="js/contactoFormulario.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="js/contactoFormulario.js"></script>
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>

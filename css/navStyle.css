@@ -1,0 +1,314 @@
+/* Restablecimiento general */
+* {
+    margin: 0; /* Elimina los márgenes predeterminados */
+    padding: 0; /* Elimina el padding predeterminado */
+    box-sizing: border-box; /* Incluye los bordes y el padding dentro de las dimensiones del elemento */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Establece la fuente predeterminada para el cuerpo */
+}
+
+/* Top icons (Iconos en la parte superior del header) */
+.top-icons {
+    background-color: #f8f8f8; /* Fondo gris claro para la sección de iconos */
+    padding: 5px 20px; /* Relleno alrededor de los iconos */
+    text-align: right; /* Alinea los iconos a la derecha */
+}
+
+.top-icons .icons a {
+    margin: 0 15px; /* Espacio entre los iconos */
+}
+
+.top-icons .icons img {
+    width: 20px; /* Tamaño de los iconos (20px de ancho) */
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 50px;
+    max-width: 1400px;
+    margin: 0 auto;
+    transition: background-color 0.3s ease;
+    background-color: white;
+}
+
+/* Controla el header cuando se activa el scroll */
+header.sticky {
+    position: fixed;          /*Fija el nav en la parte superior*/
+    top: 0;                  /*Posición desde arriba*/
+    left: 0;                 /* Posición desde la izquierda*/
+    right: 0;                /*Posición desde la derecha*/
+    width: 100%;            /*Ancho completo*/
+    z-index: 1100;           /*Nivel de superposición*/
+    background-color: white;/*Color de fondo*/
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /*Sombra inferior*/
+    margin: 0;               /* Sin márgenes*/
+    padding: 10px 0;         /*Espaciado interno*/
+    max-width: none;         /*Sin ancho máximo*/
+}
+
+/* Controla el contenedor del logo durante el scroll */
+header.sticky .logo-container {
+    display: flex;           /* Disposición flexible*/
+    justify-content: flex-start; /*Alineación al inicio*/
+    padding-left: 50px;      /* Espaciado izquierdo*/
+    width: 200px;            /*Ancho fijo*/
+}
+
+/* Controla la barra de navegación durante el scroll */
+header.sticky .navbar {
+    display: flex;           /* Disposición flexible*/
+    justify-content: center; /* Centrado horizontal*/
+    margin-left: 148px;      /* Margen izquierdo*/
+    width: 100%;            /* Ancho completo*/
+}
+
+/* Controla la sección derecha durante el scroll */
+header.sticky .right-section {
+    display: flex;           /* Disposición flexible */
+    justify-content: flex-end; /* Alineación al final */
+    padding-right: 325px;     /* Espaciado derecho */
+    width: 200px;            /* Ancho fijo */
+}
+
+
+
+.logo-container {
+    width: 200px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo.fixed {
+    position: fixed; /* Fija el logo en la parte superior */
+    top: 10px; /* Posiciona el logo 10px desde la parte superior */
+    left: 20px; /* Posiciona el logo 20px desde la izquierda */
+    z-index: 1100; /* Asegura que el logo fijo esté por encima de otros elementos */
+}
+
+.logo:hover {
+    transform: scale(0.8); /* Aumenta el tamaño del logo al pasar el mouse */
+    opacity: 0.9; /* Hace el logo un poco más transparente al pasar el mouse */
+}
+.right-section {
+    width: 200px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    margin-left: 147px; /* Ajusta este valor según necesites */
+}
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 60px;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu {
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    min-width: 200px;
+    z-index: 1000;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    flex-direction: column;
+}
+
+/* Activación del dropdown */
+.navbar ul li:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+.navbar ul.dropdown-menu {
+    display: flex;
+    gap: 0;
+    flex-direction: column;
+}
+
+.dropdown-menu li {
+    width: 100%;
+    display: block;
+}
+
+
+.dropdown-menu li a {
+    padding: 8px 15px;
+    display: block;
+    width: 100%;
+}
+
+.navbar ul li {
+    position: relative;
+    display: inline-block;
+}
+
+.navbar ul li:hover .dropdown-menu {
+    visibility: visible;
+    opacity: 1;
+}
+
+.dropdown-menu li:hover {
+    background-color: #f8f8f8;
+}
+
+
+.navbar ul li a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: #333; /* Color del texto de los enlaces */
+    font-weight: bold; /* Hace los textos de los enlaces en negrita */
+    font-size: 1.1rem; /* Tamaño de fuente ligeramente mayor que el predeterminado */
+    font-family: 'Poppins', sans-serif; /* Establece una fuente sans-serif */
+    transition: color 0.3s, font-size 0.3s; /* Transiciones suaves para cambios de color y tamaño de fuente */
+}
+
+.navbar ul li a:hover {
+    color: #ff8700; /* Cambia el color a anaranjado cuando se pasa el mouse */
+    font-size: 1.2rem; /* Aumenta el tamaño del texto en hover */
+}
+
+/* Menú hamburguesa (para dispositivos móviles) */
+.hamburger {
+    display: none; /* Por defecto está oculto */
+    flex-direction: column; /* Los 3 divs dentro se organizan en columna */
+    gap: 4px; /* Espacio entre las 3 líneas del menú */
+    cursor: pointer; /* Cambia el cursor a puntero cuando se pasa sobre el menú */
+    position: absolute; /* Lo coloca en una posición absoluta dentro del header */
+    right: 20px; /* Posiciona el menú a la derecha */
+    z-index: 1100; /* Asegura que el menú hamburguesa esté por encima de otros elementos */
+}
+
+.hamburger div {
+    width: 25px; /* Ancho de las líneas del menú */
+    height: 3px; /* Altura de las líneas del menú */
+    background-color: #333; /* Color de las líneas */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transición suave para los cambios */
+}
+
+/* Animación de transformación cuando el menú se abre (icono de hamburguesa a 'X') */
+.hamburger.open div:nth-child(1) {
+    transform: rotate(45deg); /* Gira la primera línea 45 grados */
+    transform-origin: 5% 5%; /* Define el origen de la rotación */
+}
+
+.hamburger.open div:nth-child(2) {
+    opacity: 0; /* Oculta la segunda línea */
+}
+
+.hamburger.open div:nth-child(3) {
+    transform: rotate(-45deg); /* Gira la tercera línea -45 grados */
+    transform-origin: 5% 95%; /* Define el origen de la rotación para la tercera línea */
+}
+
+/* Menú móvil */
+.mobile-menu {
+    display: none; /* Oculto por defecto */
+    flex-direction: column; /* Distribuye los elementos en columna */
+    background: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
+    position: fixed; /* Fijo en la pantalla */
+    margin-top: 12px; /* Espacio desde la parte superior */
+    right: 0; /* Posiciona el menú en el lado derecho */
+    width: 250px; /* Ancho fijo para el menú */
+    max-height: 90%; /* Limita la altura del menú */
+    padding: 20px; /* Relleno interno del menú */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Sombra alrededor del menú */
+    transform: translateX(100%); /* Lo oculta fuera de la pantalla */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Transición para la animación */
+    opacity: 0; /* Hace el menú invisible por defecto */
+    pointer-events: none; /* Deshabilita la interacción con el menú cuando está oculto */
+    z-index: 999; /* Asegura que el menú esté por encima del contenido pero debajo del header */
+}
+
+/* Mostrar menú con la clase 'active' */
+.mobile-menu.active {
+    display: flex; /* Muestra el menú */
+    transform: translateX(0); /* Lo mueve a su posición original */
+    opacity: 1; /* Lo hace visible */
+    pointer-events: all; /* Habilita la interacción con el menú */
+}
+
+/* Enlaces del menú móvil */
+.mobile-menu ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el padding */
+    margin-top: 50px; /* Espacio para no chocar con el logo */
+}
+
+.mobile-menu ul li {
+    margin: 15px 0; /* Espacio entre los elementos de la lista */
+}
+
+.mobile-menu ul li a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: #333; /* Color de los enlaces */
+    font-weight: bold; /* Hace los textos en negrita */
+    font-size: 1.2rem; /* Tamaño de fuente */
+    transition: color 0.3s, font-size 0.3s; /* Transición para color y tamaño */
+    padding: 8px; /* Relleno alrededor de los enlaces */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Hover de los enlaces en el menú móvil */
+.mobile-menu ul li a:hover {
+    background-color: #ff4c4c; /* Fondo rojo en hover */
+    color: #fff; /* Color de texto blanco en hover */
+    font-size: 1.3rem; /* Aumenta el tamaño del texto en hover */
+}
+
+/* Resaltar cuando el menú está activo */
+.mobile-menu.active ul li a:hover {
+    background-color: #ff8700; /* Fondo naranja cuando el menú está activo */
+}
+
+/* Estilos responsivos (para dispositivos pequeños) */
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none; /* Oculta los enlaces de la barra de navegación en dispositivos pequeños */
+    }
+
+    .right-section {
+        display: none; /* Oculta la sección derecha del header */
+    }
+
+    .hamburger {
+        display: flex; /* Muestra el menú hamburguesa */
+    }
+
+    .mobile-menu.active {
+        display: flex; /* Muestra el menú móvil cuando está activo */
+        position: fixed; /* Fijo en la parte superior */
+        top: 60px; /* Evita que el menú se superponga con el header */
+        right: 0;
+        width: 250px; /* Limita el ancho del menú */
+        max-height: 90%; /* Limita la altura del menú */
+        padding: 20px; /* Relleno interno */
+        overflow-y: auto; /* Permite desplazamiento si es necesario */
+    }
+}
+
+/* Asegurar que el contenido debajo del menú tenga espacio para no quedar oculto */
+.main-content {
+    padding-top: 80px; /* Añade espacio superior para el contenido debajo del header */
+}

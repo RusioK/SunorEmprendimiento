@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Teknica</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Sección de iconos sociales superior -->
+    <div class="top-icons">
+        <div class="icons">
+            <a href="#"><img src="images/iconos/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="images/iconos/youtube.png" alt="YouTube"></a>
+        </div>
+    </div>
+
+    <header>
+        <div class="logo-container">
+            <img src="images/iconos/Sunor.png" alt="Logo Teknica" class="logo">
+            
+        </div>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Noticias</a></li>
+                <li><a href="#">Blog's</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="right-section">
+            
+           
+        </div>
+
+        <!-- Menú hamburguesa para móviles -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+
+    <!-- Contenedor para el menú móvil -->
+    <div id="mobile-menu" class="mobile-menu">
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Noticias</a></li>
+            <li><a href="#">Blog's</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("mobile-menu");
+            menu.classList.toggle("active");
+        }
+    </script>
+
+</body>
+</html>
